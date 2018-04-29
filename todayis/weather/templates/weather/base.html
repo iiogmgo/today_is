@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>today is</title>
+        <link rel="stylesheet" href='https://unpkg.com/papercss/dist/paper.min.css'>
+        <link rel="stylesheet" href="{% static 'css/weather.css' %}">
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
