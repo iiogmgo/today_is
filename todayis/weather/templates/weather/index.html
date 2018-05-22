@@ -8,11 +8,12 @@
       </div>
 
       <div class="text-center">
-        {% for day in days %}
+        {% for w_date, w_info in weather_info.items %}
           <div class="card weather-card" style="width: 20rem;">
+            <div class="weather-color success"></div>
             <div class="card-body">
-              <h3 class="card-title">{{ day }}</h3>
-              <p class="card-subtitle">최고 25/최저 11 <span class="badge success">123</span></p>
+              <h3 class="card-title">{{ w_date }}</h3>
+              <p class="card-subtitle">최고 {{ w_info.max_temp }}/최저 {{ w_info.min_temp }} <span class="badge success">123</span></p>
               <p class="card-text">오늘 날씨는 춥고 덥고 오지고 지리고 레릿고</p>
             </div>
           </div>

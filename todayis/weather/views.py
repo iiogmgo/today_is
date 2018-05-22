@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from .weatherApi import WeatherApi
 
 
 def index(request):
-    days = ['어제', '오늘', '내일']
-    return render(request, 'weather/index.html', {'days': days})
+    api = WeatherApi('3973fb507ae00b906235026db802504b')
+    weather_info = api.search()
+
+    return render(request, 'weather/index.html', {'weather_info': weather_info})

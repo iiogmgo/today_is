@@ -5,3 +5,8 @@ html {
 .weather-card {
   display: inline-block;
 }
+
+.weather-color {
+  width: 100%;
+  height: 200px;
+}
